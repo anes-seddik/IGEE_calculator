@@ -45,7 +45,7 @@
             android:textColor="@color/black"
             android:textSize="30sp"
             android:layout_marginVertical="15dp"
-            android:onClick="gotoL01"
+            android:onClick="gotoSemesters"
             />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/year2"
@@ -59,7 +59,8 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="30sp"
-            android:layout_marginVertical="15dp"/>
+            android:layout_marginVertical="15dp"
+            android:onClick="gotoSemesters"/>
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/year3"
             android:layout_width="250dp"
@@ -72,7 +73,8 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="30sp"
-            android:layout_marginVertical="15dp"/>
+            android:layout_marginVertical="15dp"
+            android:onClick="gotoSemesters"/>
 
     </LinearLayout>
 

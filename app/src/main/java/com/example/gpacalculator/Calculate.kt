@@ -9,27 +9,43 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.textfield.TextInputEditText
-import kotlinx.android.synthetic.main.activity_l01_s2.*
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_calculate.*
+
 import kotlinx.android.synthetic.main.dialog.*
 import java.math.RoundingMode
 import java.text.DecimalFormat
 
-class L01_S1 : AppCompatActivity() {
-
+class Calculate : AppCompatActivity() {
+    private  var yearNum = 0
+    private  var semester = 0
     private  val df = DecimalFormat("#.##")
     private val zero = 0
     private val zerro = zero.toFloat()
     private var error = false
     private lateinit var sharedPrefs : SharedPreferences
 
+    var coeff1 = 0
+    var coeff2 = 0
+    var coeff3 = 0
+    var coeff4 = 0
+    var coeff5 = 0
+    var coeff6 = 0
+    var coeff7 = 0
+    var coeff8 = 0
+    var coeff9 = 0
+
     private var stored =false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_l01_s1)
-        sharedPrefs = getSharedPreferences("spL1S1",Context.MODE_PRIVATE)
+        setContentView(R.layout.activity_calculate)
 
+        yearNum = intent.getIntExtra("year",0)
+        semester = intent.getIntExtra("semester",0)
+        sharedPrefs = getSharedPreferences("spL${yearNum}S$semester",Context.MODE_PRIVATE)
+
+        pageTitle.setText("L0$yearNum - S$semester")
+        arrangeGrid()
 
         stored = sharedPrefs.getBoolean("stored",false)
         if (stored){
@@ -38,8 +54,171 @@ class L01_S1 : AppCompatActivity() {
 
     }
 
+    private fun arrangeGrid() {
+        when(yearNum){
+            1 -> {
+                if (semester == 1)
+                    L1S1()
+                else if (semester == 2)
+                    L1S2()
+            }
+            2 -> {
+                if (semester == 1)
+                    L2S1()
+                else if (semester == 2)
+                    L2S2()
+            }
+            3 -> {
+                if (semester == 1)
+                    L3S1()
+                else if (semester == 2)
+                    L3S2()
+            }
+        }
+    }
+
+
+
+
+    private fun L1S1() {
+
+        mod1.setText("Calculus")
+        mod2.setText("Chemistry")
+        mod3.setText("Physics")
+        mod4.setText("Physics Lab")
+        mod5.setText("EST")
+        mod6.setText("Grammar")
+        mod7.setText("LS")
+        mod8.setText("RW")
+        mod9.setText("C prog")
+
+        coeff1 = 3
+        coeff2 = 3
+        coeff3 = 3
+        coeff4 = 1
+        coeff5 = 2
+        coeff6 = 2
+        coeff7 = 2
+        coeff8 = 2
+        coeff9 = 1
+
+    }
+    private fun L1S2() {
+        mod1.setText("Calculus")
+        mod2.setText("Algebra")
+        mod3.setText("Chemistry")
+        mod4.setText("Physics")
+        mod5.setText("C prog")
+        mod6.setText("Physics lab")
+        mod7.setText("LS")
+        mod8.setText("RW")
+        mod9.setText("Electricity")
+
+        coeff1 = 2
+        coeff2 = 3
+        coeff3 = 2
+        coeff4 = 3
+        coeff5 = 2
+        coeff6 = 1
+        coeff7 = 1
+        coeff8 = 1
+        coeff9 = 2
+
+    }
+
+    private fun L2S1() {
+        mod1.setText("Diff equations")
+        mod2.setText("Physics")
+        mod3.setText("Active Dev")
+        mod4.setText("Digital Sys")
+        mod5.setText("electricity")
+        mod6.setText("Active Dev lab")
+        mod7.setText("Digital Sys Lab")
+        mod8.setText("electricity lab")
+        mod9.setText("Eng Economics")
+
+        coeff1 = 2
+        coeff2 = 3
+        coeff3 = 3
+        coeff4 = 3
+        coeff5 = 3
+        coeff6 = 1
+        coeff7 = 1
+        coeff8 = 1
+        coeff9 = 1
+    }
+
+    private fun L2S2() {
+        mod1.setText("Electromag")
+        mod2.setText("Linear Sys")
+        mod3.setText("Active Dev")
+        mod4.setText("Digital Sys")
+        mod5.setText("E.M")
+        mod6.setText("Active Dev Lab")
+        mod7.setText("Digital Sys Lab")
+        mod8.setText("E.M Lab")
+
+        modRow9.visibility = View.GONE
+
+        coeff1 = 3
+        coeff2 = 3
+        coeff3 = 3
+        coeff4 = 3
+        coeff5 = 3
+        coeff6 = 1
+        coeff7 = 1
+        coeff8 = 1
+
+    }
+
+    private fun L3S1() {
+        mod1.setText("comp arch")
+        mod2.setText("C.P")
+        mod3.setText("M.S.D")
+        mod4.setText("Power Elec")
+        mod5.setText("Linear Sys")
+        mod6.setText("Process Cont")
+        mod7.setText("C.P  Lab")
+        mod8.setText("Power Elec Lab")
+        mod9.setText("M.S.D  Lab")
+
+        coeff1 = 3
+        coeff2 = 3
+        coeff3 = 3
+        coeff4 = 3
+        coeff5 = 3
+        coeff6 = 3
+        coeff7 = 1
+        coeff8 = 1
+        coeff9 = 1
+    }
+
+    private fun L3S2() {
+
+        mod1.setText("C.C")
+        mod2.setText("Energy Sys")
+        mod3.setText("L.C.S")
+        mod4.setText("C.C  Lab")
+        mod5.setText("L.C.S Lab")
+        mod6.setText("Project")
+        mod7.setText("Eng Manage")
+
+        modRow8.visibility = View.GONE
+        modRow9.visibility = View.GONE
+
+        coeff1 = 3
+        coeff2 = 3
+        coeff3 = 3
+        coeff4 = 1
+        coeff5 = 1
+        coeff6 = 4
+        coeff7 = 2
+
+    }
+
     override fun onBackPressed() {
-        val intent = Intent(this,LO1::class.java)
+        val intent = Intent(this,SEMESTERS::class.java)
+        intent.putExtra("year",yearNum)
         startActivity(intent)
         finish()
 
@@ -100,15 +279,15 @@ class L01_S1 : AppCompatActivity() {
         }
         else if (!error){
             //averages:
-            val avrg1 = calcAverages(cont1,exam1);val coeff1 = 3
-            val avrg2 = calcAverages(cont2,exam2);val coeff2 = 3
-            val avrg3 = calcAverages(cont3,exam3);val coeff3 = 3
-            val avrg4 = calcAverages(cont4,exam4);val coeff4 = 1
-            val avrg5 = calcAverages(cont5,exam5);val coeff5 = 2
-            val avrg6 = calcAverages(cont6,exam6);val coeff6 = 2
-            val avrg7 = calcAverages(cont7,exam7);val coeff7 = 2
-            val avrg8 = calcAverages(cont8,exam8);val coeff8 = 2
-            val avrg9 = calcAverages(cont9,exam9);val coeff9 = 1
+            val avrg1 = calcAverages(cont1,exam1)
+            val avrg2 = calcAverages(cont2,exam2)
+            val avrg3 = calcAverages(cont3,exam3)
+            val avrg4 = calcAverages(cont4,exam4)
+            val avrg5 = calcAverages(cont5,exam5)
+            val avrg6 = calcAverages(cont6,exam6)
+            val avrg7 = calcAverages(cont7,exam7)
+            val avrg8 = calcAverages(cont8,exam8)
+            val avrg9 = calcAverages(cont9,exam9)
 
 
             storeavrgs(avrg1,avrg2,avrg3,avrg4,avrg5,avrg6,avrg7,avrg8,avrg9)

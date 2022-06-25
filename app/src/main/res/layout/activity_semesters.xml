@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LO1"
+    tools:context=".SEMESTERS"
     android:background="@drawable/noxgrey">
+
     <TextView
         android:id="@+id/S1"
         android:layout_width="match_parent"
@@ -13,12 +14,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="Semester 1"
+        android:text="L01 - S1"
         android:textAlignment="center"
         android:textSize="35sp"
         android:fontFamily="@font/poppins_bold"
         android:textColor="@color/black"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         />
 
     <LinearLayout
@@ -30,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/S1"
         android:layout_marginTop="10dp"
-        android:background="@drawable/shape1"
+        android:background="@drawable/gradient_bg"
         android:paddingVertical="5dp"
         android:paddingHorizontal="10dp"
         android:layout_marginHorizontal="25dp"
@@ -79,7 +80,7 @@
             android:src="@drawable/calc"
             android:layout_weight="1"
             android:layout_marginStart="5dp"
-            android:onClick="gotoL01S1"
+            android:onClick="gotoCalculate"
             />
 
     </LinearLayout>
@@ -90,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/S1layout"
-        android:text="Semester 2"
+        android:text="L01 - S2"
         android:textAlignment="center"
         android:textSize="35sp"
         android:fontFamily="@font/poppins_bold"
@@ -107,7 +108,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/S2"
         android:layout_marginTop="10dp"
-        android:background="@drawable/shape1"
+        android:background="@drawable/gradient_bg"
         android:paddingVertical="5dp"
         android:paddingHorizontal="10dp"
         android:layout_marginHorizontal="25dp"
@@ -156,7 +157,7 @@
             android:src="@drawable/calc"
             android:layout_weight="1"
             android:layout_marginStart="5dp"
-            android:onClick="gotoL01S2"
+            android:onClick="gotoCalculate"
             />
     </LinearLayout>
 
@@ -172,7 +173,8 @@
         android:textSize="35sp"
         android:fontFamily="@font/poppins_bold"
         android:textColor="@color/black"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
+
         />
     <TextView
         android:id="@+id/yearGrade"
@@ -187,7 +189,8 @@
         android:fontFamily="@font/poppins_bold"
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
-        android:background="@drawable/shape1"
+        android:background="@drawable/gradient_bg"
+
         android:paddingHorizontal="50dp"
         />
 

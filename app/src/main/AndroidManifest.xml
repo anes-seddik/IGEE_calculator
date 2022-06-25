@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GpaCalculator">
         <activity
+            android:name=".Calculate"
+            android:exported="false" />
+        <activity
             android:name=".L01_S1"
             android:exported="false" />
         <activity
-            android:name=".LO1"
+            android:name=".SEMESTERS"
             android:exported="false" />
         <activity
             android:name=".L01_S2"

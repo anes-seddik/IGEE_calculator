@@ -1,18 +1,10 @@
 package com.example.gpacalculator
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import androidx.appcompat.app.AlertDialog
-import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.dialog.*
-import java.math.RoundingMode
-import java.text.DecimalFormat
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,8 +21,14 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun gotoL01(view: View) {
-        val intent = Intent(this,LO1::class.java)
+    fun gotoSemesters(view: View) {
+        val intent = Intent(this,SEMESTERS::class.java)
+        when(view){
+            year1 -> intent.putExtra("year",1)
+            year2 -> intent.putExtra("year",2)
+            year3 -> intent.putExtra("year",3)
+        }
+
         startActivity(intent)
         finish()
 

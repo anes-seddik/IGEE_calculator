@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/noxgrey"
-    tools:context=".L01_S2">
+    tools:context=".Calculate">
 
     <TextView
         android:layout_marginTop="15dp"
@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/dark_grey"
+        android:textColor="@color/black"
         android:textSize="30sp"
         android:textAlignment="center"
         android:text="L01 - S2"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:gravity="start"
         android:background="@drawable/shape1"
-        android:backgroundTint="@color/light_grey"
+        android:backgroundTint="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:paddingVertical="5dp"
@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/shape1"
-        android:backgroundTint="@color/light_grey"
+        android:backgroundTint="@color/white"
         android:gravity="center"
 
 
@@ -81,9 +81,12 @@
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:text="algebra"
+                android:id="@+id/mod1"
+                android:text="Algebra"
                 style="@style/module_spot"
-                android:backgroundTint="#949494"
+                android:backgroundTint="@color/black"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_bold"
                 />
 
             <com.google.android.material.textfield.TextInputEditText
@@ -106,10 +109,12 @@
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
-
+                android:id="@+id/mod2"
                 android:text="calculus"
                 style="@style/module_spot"
-                android:backgroundTint="#949494"/>
+                android:backgroundTint="@color/black"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_bold"/>
 
             <com.google.android.material.textfield.TextInputEditText
                 style="@style/grid_spot"
@@ -130,10 +135,12 @@
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mod3"
                 android:text="chemistry"
                 style="@style/module_spot"
-                android:backgroundTint="#949494"
-
+                android:backgroundTint="@color/black"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_bold"
                 />
 
             <com.google.android.material.textfield.TextInputEditText
@@ -155,10 +162,12 @@
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
-
+                android:id="@+id/mod4"
                 android:text="physics"
                 style="@style/module_spot"
-                android:backgroundTint="#949494"
+                android:backgroundTint="@color/black"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_bold"
                 />
 
             <com.google.android.material.textfield.TextInputEditText
@@ -179,10 +188,12 @@
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
-
+                android:id="@+id/mod5"
                 android:text="C prog"
                 style="@style/module_spot"
-                android:backgroundTint="#949494"
+                android:backgroundTint="@color/black"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_bold"
                 />
 
             <com.google.android.material.textfield.TextInputEditText
@@ -204,10 +215,12 @@
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
-
+                android:id="@+id/mod6"
                 android:text="physics lab"
                 style="@style/module_spot"
-                android:backgroundTint="#949494"
+                android:backgroundTint="@color/black"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_bold"
                 />
 
             <com.google.android.material.textfield.TextInputEditText
@@ -229,10 +242,12 @@
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
-
+                android:id="@+id/mod7"
                 android:text="LS"
                 style="@style/module_spot"
-                android:backgroundTint="#949494"
+                android:backgroundTint="@color/black"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_bold"
                 />
 
             <com.google.android.material.textfield.TextInputEditText
@@ -247,15 +262,19 @@
                 android:id="@+id/avg7"/>
         </TableRow>
         <TableRow
+            android:id="@+id/modRow8"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center">
+            android:gravity="center"
+            android:visibility="visible">
 
             <androidx.appcompat.widget.AppCompatButton
-
+                android:id="@+id/mod8"
                 android:text="RW"
                 style="@style/module_spot"
-                android:backgroundTint="#949494"
+                android:backgroundTint="@color/black"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_bold"
                 />
 
             <com.google.android.material.textfield.TextInputEditText
@@ -272,13 +291,18 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center">
+            android:gravity="center"
+            android:id="@+id/modRow9"
+            android:visibility="visible"
+            >
 
             <androidx.appcompat.widget.AppCompatButton
-
+                android:id="@+id/mod9"
                 android:text="electricity"
                 style="@style/module_spot"
-                android:backgroundTint="#949494"
+                android:backgroundTint="@color/black"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_bold"
                 />
 
             <com.google.android.material.textfield.TextInputEditText
@@ -296,18 +320,19 @@
     </TableLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_marginTop="30dp"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:text="calculate"
+        android:background="@drawable/gradient_bg"
 
+        android:fontFamily="@font/poppins_bold"
+        android:onClick="calculateFinal"
+        android:text="calculate"
+        android:textColor="@color/black"
         android:textSize="30sp"
-        android:textColor="@color/dark_grey"
-        android:background="@drawable/button"
+
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grid"
-        android:onClick="calculateFinal"
-        android:fontFamily="@font/poppins_bold"/>
+        android:layout_marginBottom="30dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

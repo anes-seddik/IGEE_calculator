@@ -6,12 +6,14 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_lo1.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_semesters.*
+
 import java.math.RoundingMode
 import java.text.DecimalFormat
 
-class LO1 : AppCompatActivity() {
-
+class SEMESTERS : AppCompatActivity() {
+    private  var yearNum = 0
     private  val df = DecimalFormat("#.##")
     private val zero = 0
     private val zerro = zero.toFloat()
@@ -21,9 +23,14 @@ class LO1 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_lo1)
-        sharedPrefs1 = getSharedPreferences("spL1S1", Context.MODE_PRIVATE)
-        sharedPrefs2 = getSharedPreferences("spL1S2", Context.MODE_PRIVATE)
+        setContentView(R.layout.activity_semesters)
+        yearNum = intent.getIntExtra("year",0)
+        sharedPrefs1 = getSharedPreferences("spL${yearNum}S1", Context.MODE_PRIVATE)
+        sharedPrefs2 = getSharedPreferences("spL${yearNum}S2", Context.MODE_PRIVATE)
+
+        S1.setText("L0$yearNum - S1")
+        S2.setText("L0$yearNum - S2")
+
 
         val stored1 = sharedPrefs1.getBoolean("stored",false)
         val stored2 = sharedPrefs2.getBoolean("stored",false)
@@ -53,18 +60,18 @@ class LO1 : AppCompatActivity() {
 
     }
 
-    fun gotoL01S1(view: View) {
-        val intent = Intent(this,L01_S1::class.java)
+    fun gotoCalculate(view: View) {
+        val intent = Intent(this,Calculate::class.java)
+        when(view){
+            clac1 -> intent.putExtra("semester",1)
+            clac2 -> intent.putExtra("semester",2)
+        }
+        intent.putExtra("year",yearNum)
         startActivity(intent)
         finish()
     }
 
-    fun gotoL01S2(view: View) {
-        val intent = Intent(this,L01_S2::class.java)
-        startActivity(intent)
-        finish()
 
-    }
     override fun onBackPressed() {
         val intent = Intent(this,MainActivity::class.java)
         startActivity(intent)
