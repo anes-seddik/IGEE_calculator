@@ -4,77 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/noxgrey"
+    android:background="#F9F9F8"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/abouttheapp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical"
+        android:padding="7dp"
+        android:src="@drawable/more_ic"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black"
+        android:onClick="showMenu"/>
 
     <TextView
         android:id="@+id/page_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="which year are you ?"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="which year are you ?"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="50dp"
-        />
+        android:layout_marginTop="20dp"/>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/page_title"
-        android:orientation="vertical"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/year1"
             android:layout_width="250dp"
             android:layout_height="50dp"
-
-
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
             android:background="@drawable/year_btn"
             android:fontFamily="@font/poppins_bold"
-            android:text="L 01"
+            android:onClick="gotoSemesters"
+            android:outlineSpotShadowColor="@color/black"
+            android:text="1st Year"
+            android:textAllCaps="false"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="30sp"
-            android:layout_marginVertical="15dp"
-            android:onClick="gotoSemesters"
-            />
+            android:textSize="28sp" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/year2"
             android:layout_width="250dp"
             android:layout_height="50dp"
-
-
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
             android:background="@drawable/year_btn"
             android:fontFamily="@font/poppins_bold"
-            android:text="L 02"
+            android:onClick="gotoSemesters"
+            android:outlineSpotShadowColor="@color/black"
+            android:text="2nd Year"
+            android:textAllCaps="false"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="30sp"
-            android:layout_marginVertical="15dp"
-            android:onClick="gotoSemesters"/>
+            android:textSize="28sp" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/year3"
             android:layout_width="250dp"
             android:layout_height="50dp"
-
-
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
             android:background="@drawable/year_btn"
             android:fontFamily="@font/poppins_bold"
-            android:text="L 03"
+            android:onClick="gotoSemesters"
+            android:outlineSpotShadowColor="@color/black"
+            android:text="3rd Year"
+            android:textAllCaps="false"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="30sp"
-            android:layout_marginVertical="15dp"
-            android:onClick="gotoSemesters"/>
+            android:textSize="28sp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/year4"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/year_btn"
+            android:fontFamily="@font/poppins_bold"
+            android:onClick="gotoSemesters"
+            android:outlineSpotShadowColor="@color/black"
+            android:text="4th Year"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/year5"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/year_btn"
+            android:fontFamily="@font/poppins_bold"
+            android:onClick="gotoSemesters"
+            android:outlineSpotShadowColor="@color/black"
+            android:text="5th Year"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
 
     </LinearLayout>
 

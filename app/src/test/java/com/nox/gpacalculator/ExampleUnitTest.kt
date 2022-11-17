@@ -1,4 +1,4 @@
-package com.example.gpacalculator
+package com.nox.gpacalculator
 
 import org.junit.Test
 

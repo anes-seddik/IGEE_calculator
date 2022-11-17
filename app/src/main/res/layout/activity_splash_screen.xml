@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splash_screen"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="180dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Gpa Calculator"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/dark_grey"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="made by     \n @nox.anes"
+        android:textAlignment="textEnd"
+        android:paddingEnd="20dp"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/grey"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

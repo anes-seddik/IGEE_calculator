@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape1"
+
+    android:padding="10dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+
+    >
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Welcome"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+
+        android:fontFamily="@font/poppins_bold"/>
+
+
+    <TextView
+        android:layout_marginStart="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingHorizontal="8dp"
+        android:text="-Scroll down if some UI components are not visible."
+        android:textColor="@color/dark_grey"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginStart="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingHorizontal="8dp"
+
+        android:text="-Click on the abbreviated module name to see the full name."
+        android:textColor="@color/dark_grey"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_marginStart="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingHorizontal="8dp"
+        android:text="-if you face any bugs after the update, try clearing the cache , it should fix it."
+        android:textColor="@color/dark_grey"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:layout_marginStart="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingHorizontal="8dp"
+        android:text="-Good luck on your tests ❤ ."
+
+        android:textColor="@color/dark_grey"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_marginStart="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingHorizontal="8dp"
+        android:text="  (you probably need a miracle not just luck..)"
+
+        android:textColor="@color/grey"
+        android:textSize="8sp"
+        android:layout_marginTop="3dp"
+        />
+
+
+</LinearLayout>

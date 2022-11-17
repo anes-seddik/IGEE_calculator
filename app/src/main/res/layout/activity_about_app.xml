@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".about_app"
+    android:fillViewport="true"
+
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+
+        android:background="@color/white"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/spot_bg"
+            android:paddingBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="8dp"
+            >
+            <TextView
+                android:layout_marginStart="10dp"
+
+                android:id="@+id/txt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingHorizontal="8dp"
+                android:text="-This app was specifically made for IGEE (ex INELEC) students only , i doubt other uni students may find it useful."
+                android:textColor="@color/dark_grey"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_marginStart="10dp"
+
+                android:id="@+id/txt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingHorizontal="8dp"
+                android:text="- It allows the users to calculate both their semester and year grades.
+"
+                android:textColor="@color/dark_grey"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/txt1" />
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/txt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingHorizontal="8dp"
+                android:text="- It helps the users by saving the previously entered grades for easy editing afterwards.
+and more features will be added in later updates.
+"
+
+                android:textColor="@color/dark_grey"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/txt2"
+                />
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/txt4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingHorizontal="8dp"
+                android:text="You can always click on any of the abbreviated module names to toast the full module name to know what the abbreviation stands for, if needed. "
+
+                android:textColor="@color/dark_grey"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/txt3"
+                />
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/txt5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingHorizontal="8dp"
+                android:text="-As I (the developer) am an inelec student myself you can rest assured the math on this app is done correctly ✅ ."
+
+                android:textColor="@color/dark_grey"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/txt4"
+                />
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/txt6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingHorizontal="8dp"
+                android:text="-Don't forget to Check me out on instagram to see more of my work, and support me by rating the app on the  Play store  ❤. "
+
+                android:textColor="@color/dark_grey"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/txt5"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomLayout"
+            app:layout_constraintTop_toBottomOf="@+id/topLayout"
+            android:visibility="invisible"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingEnd="15dp"
+            android:onClick="gotoYoutube"
+            >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="25dp"
+
+                android:src="@drawable/youtube22"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/roboto_black"
+                android:text="nox anes"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_grey"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingEnd="15dp"
+            android:onClick="gotoInsta"
+            >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="25dp"
+
+                android:padding="3dp"
+                android:src="@drawable/instagram"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/roboto_black"
+                android:text="\@nox.anes"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_grey"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

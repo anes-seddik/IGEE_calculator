@@ -1,338 +1,634 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/noxgrey"
-    tools:context=".Calculate">
+    tools:context=".Calculate"
+    android:fillViewport="true"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
 
-    <TextView
-        android:layout_marginTop="15dp"
-        android:id="@+id/pageTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:text="L01 - S2"
-        android:fontFamily="@font/poppins_bold"/>
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#F9F9F8"
+        tools:context=".Calculate"
 
-    <TableRow
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="start"
-        android:background="@drawable/shape1"
-        android:backgroundTint="@color/white"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:paddingVertical="5dp"
-        android:paddingHorizontal="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/grid"
-        android:layout_marginBottom="5dp"
         >
 
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="L01 - S2"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape1"
+            android:backgroundTint="@color/white"
+            android:elevation="20dp"
+            android:gravity="start"
+            android:paddingHorizontal="2dp"
+            android:paddingVertical="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pageTitle">
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/title_spot"
+
+                android:layout_weight="1.4"
+
+                android:text="MODULE"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                style="@style/title_spot"
+                android:text="cont" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/title_spot"
+                android:text="exam" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/title_spot"
+                android:text="coeff" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/title_spot"
+                android:text="avrg" />
+
+
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/shape1"
+            android:backgroundTint="@color/white"
+            android:elevation="20dp"
+
+
+            android:gravity="center"
+            android:outlineSpotShadowColor="@color/black"
+            android:padding="5dp"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <LinearLayout
+                android:id="@+id/modRow1"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mod1"
+                    style="@style/module_spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:backgroundTint="@color/dark_grey"
+                    android:fontFamily="@font/poppins_bold"
+                    android:onClick="toastModule"
+                    android:text="Algebra"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cont1"
+                    style="@style/grid_spot" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/exam1"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/xml_coeff1"
+                    style="@style/grid_spot" />
+
+
+                <TextView
+                    android:id="@+id/avg1"
+                    style="@style/grid_spot" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modRow2"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mod2"
+                    style="@style/module_spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:backgroundTint="@color/dark_grey"
+                    android:fontFamily="@font/poppins_bold"
+                    android:onClick="toastModule"
+                    android:text="calculus"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+
+                    />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cont2"
+                    style="@style/grid_spot" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/exam2"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/xml_coeff2"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/avg2"
+                    style="@style/grid_spot" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modRow3"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mod3"
+                    style="@style/module_spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:backgroundTint="@color/dark_grey"
+                    android:fontFamily="@font/poppins_bold"
+                    android:onClick="toastModule"
+                    android:text="chemistry"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cont3"
+                    style="@style/grid_spot" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/exam3"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/xml_coeff3"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/avg3"
+                    style="@style/grid_spot" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modRow4"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mod4"
+                    style="@style/module_spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:backgroundTint="@color/dark_grey"
+                    android:fontFamily="@font/poppins_bold"
+                    android:onClick="toastModule"
+                    android:text="physics"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cont4"
+                    style="@style/grid_spot" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/exam4"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/xml_coeff4"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/avg4"
+                    style="@style/grid_spot" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modRow5"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mod5"
+                    style="@style/module_spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:backgroundTint="@color/dark_grey"
+                    android:fontFamily="@font/poppins_bold"
+                    android:onClick="toastModule"
+                    android:text="C prog"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cont5"
+                    style="@style/grid_spot" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/exam5"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/xml_coeff5"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/avg5"
+                    style="@style/grid_spot" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modRow6"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mod6"
+                    style="@style/module_spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:backgroundTint="@color/dark_grey"
+                    android:fontFamily="@font/poppins_bold"
+                    android:onClick="toastModule"
+                    android:text="physics lab"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cont6"
+                    style="@style/grid_spot" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/exam6"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/xml_coeff6"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/avg6"
+                    style="@style/grid_spot" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modRow7"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mod7"
+                    style="@style/module_spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:backgroundTint="@color/dark_grey"
+                    android:fontFamily="@font/poppins_bold"
+                    android:onClick="toastModule"
+                    android:text="LS"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cont7"
+                    style="@style/grid_spot" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/exam7"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/xml_coeff7"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/avg7"
+                    style="@style/grid_spot" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modRow8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mod8"
+                    style="@style/module_spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:backgroundTint="@color/dark_grey"
+                    android:fontFamily="@font/poppins_bold"
+                    android:onClick="toastModule"
+                    android:text="RW"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+
+                    />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cont8"
+                    style="@style/grid_spot"
+                    android:text="" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/exam8"
+                    style="@style/grid_spot"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/xml_coeff8"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/avg8"
+                    style="@style/grid_spot" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modRow9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mod9"
+                    style="@style/module_spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:backgroundTint="@color/dark_grey"
+                    android:fontFamily="@font/poppins_bold"
+                    android:onClick="toastModule"
+                    android:text="electricity"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cont9"
+                    style="@style/grid_spot"
+                    android:text="" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/exam9"
+                    style="@style/grid_spot"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/xml_coeff9"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/avg9"
+                    style="@style/grid_spot" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modRow10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mod10"
+                    style="@style/module_spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:backgroundTint="@color/dark_grey"
+                    android:fontFamily="@font/poppins_bold"
+                    android:onClick="toastModule"
+                    android:text="electricity"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cont10"
+                    style="@style/grid_spot"
+                    android:text="" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/exam10"
+                    style="@style/grid_spot"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/xml_coeff10"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/avg10"
+                    style="@style/grid_spot" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modRow11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mod11"
+                    style="@style/module_spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:backgroundTint="@color/dark_grey"
+                    android:fontFamily="@font/poppins_bold"
+                    android:onClick="toastModule"
+                    android:text="electricity"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cont11"
+                    style="@style/grid_spot"
+                    android:text="" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/exam11"
+                    style="@style/grid_spot"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/xml_coeff11"
+                    style="@style/grid_spot" />
+
+                <TextView
+                    android:id="@+id/avg11"
+                    style="@style/grid_spot" />
+
+            </LinearLayout>
+
+        </TableLayout>
+
+
         <androidx.appcompat.widget.AppCompatButton
-            android:text="MODULE"
+            android:id="@+id/gradeBTN"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/year_btn"
+            android:elevation="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:outlineSpotShadowColor="@color/black"
+            android:shadowColor="@color/pistache"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+             />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/appCompatImageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
 
 
-            style="@style/title_spot"
-            android:layout_width="135dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/year_btn"
+            android:elevation="20dp"
+            android:onClick="calculateFinal"
+            android:outlineSpotShadowColor="@color/black"
+            android:src="@drawable/ic_equal_sign_com"
+            android:tint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gradeBTN"
             />
 
-        <androidx.appcompat.widget.AppCompatButton
-
-            style="@style/title_spot"
-            android:text="Cont"/>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:text="exam"
-            style="@style/title_spot" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:text="avrg"
-            style="@style/title_spot" />
-
-
-    </TableRow>
-    <TableLayout
-        android:id="@+id/grid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape1"
-        android:backgroundTint="@color/white"
-        android:gravity="center"
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/year_btn"
+            android:elevation="20dp"
+            android:onClick="clearAll"
+            android:outlineSpotShadowColor="@color/black"
+            android:src="@drawable/ic_baseline_delete_forever_24"
+            android:tint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/gradeBTN"
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
 
-
-        android:padding="5dp"
-        android:layout_marginTop="70dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pageTitle">
-
-        <TableRow
+        <RelativeLayout
+            android:id="@+id/relativeLayout5"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/mod1"
-                android:text="Algebra"
-                style="@style/module_spot"
-                android:backgroundTint="@color/black"
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppins_bold"
-                />
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/cont1"/>
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/exam1"/>
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/avg1"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone">
 
 
-        </TableRow>
+        </RelativeLayout>
 
-        <TableRow
+
+
+        <TextView
+
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+            android:layout_height="30dp"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@+id/gradeBTN"
+            app:layout_constraintTop_toBottomOf="@+id/grid"
+            android:visibility="invisible"
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/mod2"
-                android:text="calculus"
-                style="@style/module_spot"
-                android:backgroundTint="@color/black"
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppins_bold"/>
+            />
 
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/cont2"/>
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/exam2"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/avg2"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/mod3"
-                android:text="chemistry"
-                style="@style/module_spot"
-                android:backgroundTint="@color/black"
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppins_bold"
-                />
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/cont3"/>
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/exam3"/>
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/avg3"/>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/mod4"
-                android:text="physics"
-                style="@style/module_spot"
-                android:backgroundTint="@color/black"
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppins_bold"
-                />
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/cont4"/>
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/exam4"/>
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/avg4"/>
-
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/mod5"
-                android:text="C prog"
-                style="@style/module_spot"
-                android:backgroundTint="@color/black"
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppins_bold"
-                />
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/cont5"/>
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/exam5"/>
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/avg5"/>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/mod6"
-                android:text="physics lab"
-                style="@style/module_spot"
-                android:backgroundTint="@color/black"
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppins_bold"
-                />
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/cont6"/>
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/exam6"/>
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/avg6"/>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/mod7"
-                android:text="LS"
-                style="@style/module_spot"
-                android:backgroundTint="@color/black"
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppins_bold"
-                />
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/cont7"/>
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/exam7"/>
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/avg7"/>
-        </TableRow>
-        <TableRow
-            android:id="@+id/modRow8"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:visibility="visible">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/mod8"
-                android:text="RW"
-                style="@style/module_spot"
-                android:backgroundTint="@color/black"
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppins_bold"
-                />
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/cont8"/>
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/exam8"/>
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/avg8"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:id="@+id/modRow9"
-            android:visibility="visible"
-            >
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/mod9"
-                android:text="electricity"
-                style="@style/module_spot"
-                android:backgroundTint="@color/black"
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppins_bold"
-                />
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/cont9"/>
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/exam9"/>
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/grid_spot"
-                android:id="@+id/avg9"/>
-
-        </TableRow>
-    </TableLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:background="@drawable/gradient_bg"
-
-        android:fontFamily="@font/poppins_bold"
-        android:onClick="calculateFinal"
-        android:text="calculate"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="30dp"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

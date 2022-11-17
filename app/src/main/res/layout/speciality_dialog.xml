@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape1"
+
+    android:padding="10dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+
+    >
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Choose your major"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+
+        android:fontFamily="@font/poppins_bold"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/SP1"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/year_btn"
+        android:fontFamily="@font/poppins_bold"
+        android:outlineSpotShadowColor="@color/black"
+        android:text="Power"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/SP2"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/year_btn"
+        android:fontFamily="@font/poppins_bold"
+        android:outlineSpotShadowColor="@color/black"
+        android:text="Telecom"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal"
+
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/SP3"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/year_btn"
+        android:fontFamily="@font/poppins_bold"
+        android:outlineSpotShadowColor="@color/black"
+        android:text="Control"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal"
+
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/SP4"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/year_btn"
+        android:fontFamily="@font/poppins_bold"
+        android:outlineSpotShadowColor="@color/black"
+
+        android:text="Computer eng"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal"
+
+        />
+
+
+</LinearLayout>

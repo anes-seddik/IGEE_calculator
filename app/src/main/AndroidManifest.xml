@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gpacalculator">
+    package="com.nox.gpacalculator">
 
     <application
         android:allowBackup="true"
@@ -10,26 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GpaCalculator">
         <activity
-            android:name=".Calculate"
-            android:exported="false" />
+            android:name="com.nox.gpacalculator.about_app"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".L01_S1"
-            android:exported="false" />
-        <activity
-            android:name=".SEMESTERS"
-            android:exported="false" />
-        <activity
-            android:name=".L01_S2"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name="com.nox.gpacalculator.splash_screen"
+            android:exported="true"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.nox.gpacalculator.Calculate"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nox.gpacalculator.SEMESTERS"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nox.gpacalculator.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
